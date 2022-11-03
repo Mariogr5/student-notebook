@@ -11,16 +11,22 @@ namespace StudentsNotebook.Controllers
         {
             curseslist = new List<Kurs>()
             {
-                new Kurs(1, "Stefan", "medium"),
-                new Kurs(2, "Wodard", "easy"),
-                new Kurs(3, "Howard", "hard"),
+                new Kurs(1, "Podstawy produkcji metaamfetaminy", "Włodzimierz Biały", "medium"),
+                new Kurs(2, "Picie dla zaawansowanych", "Jeremiasz Różowy", "easy"),
+                new Kurs(3, "Podstawy samoobrony", "Heniek Szreder", "hard"),
+                new Kurs(4, "Zarządzanie", "Gustaw Fring", "hard"),
             };
 
-
+            
         }
         public IActionResult Allcurses()
         {
             return View(curseslist);
+        }
+        public IActionResult Opinion(int id)
+        {
+
+            return View();
         }
         public IActionResult Index()
         {

@@ -6,6 +6,38 @@
 
 <h1>Lista Kursów</h1>
 
-
-
-
+<table class="table">
+	<thead>
+		<tr>
+			<th>Id kursu: </th>
+			<th>Nazwa kursu: </th>
+			<th>Prowadzący: </th>
+			<th>Trudność kursu: </th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var kursek in Model)
+		{
+			<tr>
+				<td>
+					@Html.DisplayFor(modelItem => kursek.id)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => kursek.coursename)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => kursek.professor)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => kursek.learndifficulty)
+				</td>
+				<td>
+					@Html.ActionLink("Materiały", "Opinions", new{id = kursek.id})
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>
+<div class="col-md-12 text-center">
+	<button class="btn btn-danger" onclick="location.href='@Url.Action("Index", "Home")'">Dodaj kurs</button>
+</div>
