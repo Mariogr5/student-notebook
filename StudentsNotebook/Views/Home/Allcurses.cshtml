@@ -20,24 +20,24 @@
 		{
 			<tr>
 				<td>
-					@Html.DisplayFor(modelItem => kursek.id)
+					@Html.DisplayFor(modelItem => kursek.Id)
 				</td>
 				<td>
-					@Html.DisplayFor(modelItem => kursek.coursename)
+					@Html.DisplayFor(modelItem => kursek.Coursename)
 				</td>
 				<td>
-					@Html.DisplayFor(modelItem => kursek.professor)
+					@Html.DisplayFor(modelItem => kursek.Professor)
 				</td>
 				<td>
-					@Html.DisplayFor(modelItem => kursek.learndifficulty)
+					@Html.DisplayFor(modelItem => kursek.Learndifficulty)
 				</td>
 				<td>
-					@Html.ActionLink("Materiały", "Opinions", new{id = kursek.id})
+					@Html.ActionLink("Materiały", "Materials", new { id = kursek.Id})
 				</td>
 			</tr>
 		}
 	</tbody>
 </table>
 <div class="col-md-12 text-center">
-	<button class="btn btn-danger" onclick="location.href='@Url.Action("Index", "Home")'">Dodaj kurs</button>
+	<button class="btn btn-danger" onclick="location.href='@Url.Action("CreateKurs", "Home")'">Dodaj kurs</button>
 </div>

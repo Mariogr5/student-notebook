@@ -1,0 +1,13 @@
+﻿@model StudentsNotebook.Models.Kurs
+
+@{
+	ViewData["Title"] = "Materiały";
+}
+
+<h1>Materiały do kursu: @Model.Coursename</h1>
+
+<h4>Trudność Kursu: @Model.Learndifficulty</h4>
+
+<h4>Materiały:</h4>
+
+<img class="rounded" src="~/Images/@Model.Notes" height=" 250px" width="250px" />

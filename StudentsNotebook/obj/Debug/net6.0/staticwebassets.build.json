@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "YgGhiqIeplATHphKAjbdkMbpisanm2QQp1xOXmSzcis=",
+  "Hash": "jMvf5VVdYOiO8nvOhAOk7pKCoWw6vgJxIAXCzCz5D7w=",
   "Source": "StudentsNotebook",
   "BasePath": "_content/StudentsNotebook",
   "Mode": "Default",
@@ -117,6 +117,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\harnaś gaming.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\mario\\Desktop\\zadaniedomowekredek2\\StutendNotebook\\StudentsNotebook\\wwwroot\\Images\\wzorynacalki.jpg",
+      "SourceId": "StudentsNotebook",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mario\\Desktop\\zadaniedomowekredek2\\StutendNotebook\\StudentsNotebook\\wwwroot\\",
+      "BasePath": "_content/StudentsNotebook",
+      "RelativePath": "Images/wzorynacalki.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\wzorynacalki.jpg"
     },
     {
       "Identity": "C:\\Users\\mario\\Desktop\\zadaniedomowekredek2\\StutendNotebook\\StudentsNotebook\\wwwroot\\js\\site.js",
