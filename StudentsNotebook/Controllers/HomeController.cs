@@ -6,21 +6,16 @@ namespace StudentsNotebook.Controllers
 {
     public class HomeController : Controller
     {
-        List<Kurs> curseslist;
-        Kurs sam = new Kurs(2,"","","","");
-        public HomeController()
-        {
-            curseslist = new List<Kurs>()
-            {
-                new Kurs(1, "Podstawy produkcji metaamfetaminy", "Włodzimierz Biały", "medium", "wzorynacalki.jpg"),
-                new Kurs(2, "Ziołoznawstwo 3.3", "Jeremiasz Różowy", "easy","wzorynacalki.jpg"),
-                new Kurs(3, "Podstawy samoobrony", "Heniek Szreder", "hard","wzorynacalki.jpg"),
-                new Kurs(4, "Zarządzanie", "Gustaw Fring", "hard","wzorynacalki.jpg"),
-            };    
+        private readonly DataContext _datacontext;
+        //Kurs sam = new Kurs(2,"","","","");
+        public HomeController(DataContext context)
+        {   
+            _datacontext = context;
         }
         public IActionResult Allcurses()
         {
-            return View(curseslist);
+            var courses = _datacontext.curseslist.ToList();
+            return View(courses);
         }
         public IActionResult Index()
         {
@@ -28,8 +23,12 @@ namespace StudentsNotebook.Controllers
         }
         public IActionResult Materials(int id)
         {
-            var rzeczy = curseslist.FirstOrDefault(p => p.Id == id);
-            return View(rzeczy);
+            var Fo = _datacontext.curseslist.Find(id);
+            
+            if (Fo is null)
+                return NotFound();
+
+            return View(Fo);
         }
         public IActionResult Privacy()
         {
@@ -37,7 +36,7 @@ namespace StudentsNotebook.Controllers
         }
         public IActionResult CreateKurs()
         {
-            var liczba = curseslist.Count();
+            var liczba = _datacontext.curseslist.Count();
             ViewBag.liczbakursow = liczba;
             return View();
         }
@@ -47,8 +46,10 @@ namespace StudentsNotebook.Controllers
         {
             if (ModelState.IsValid)
             { 
-                curseslist.Add(kursow);
-                return View("Allcurses", curseslist);
+                _datacontext.curseslist.Add(kursow);
+                _datacontext.SaveChanges();
+                var kursy = _datacontext.curseslist.ToList();
+                return View("Allcurses", kursy);
             }
             else
             {
