@@ -1,0 +1,33 @@
+﻿@model StudentsNotebook.Models.NewMaterial
+@{
+	ViewData["Title"] = "CreateMaterial";
+}
+<form asp-action="AddMaterials" enctype="multipart/form-data">
+	<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+	<table class="table-active">
+		<thead>
+			<tr>
+				<th>Plik: </th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					<input asp-for="CourseId" value="@ViewBag.Id"/>
+					<span class="text-danger"></span>
+				</td>
+				<!--<td>
+					<input asp-for="Path" type = "file"/>
+					<span  class="text-danger"></span>
+				</td>-->
+				<td>
+					<input asp-for="formFile" type="file" />
+					<span class="text-danger"></span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<div class="col-md-12 text-center">
+		<button class=" btn btn-danger" type="submit" onclick="location.href='@Url.Action("AddMaterials", "Home")'">Dodaj Materiał</button>
+	</div>
+</form>

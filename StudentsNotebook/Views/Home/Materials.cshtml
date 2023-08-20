@@ -1,4 +1,4 @@
-﻿@model StudentsNotebook.Models.Kurs
+﻿@model StudentsNotebook.Models.Course
 
 @{
 	ViewData["Title"] = "Materiały";
@@ -9,5 +9,18 @@
 <h4>Trudność Kursu: @Model.Learndifficulty</h4>
 
 <h4>Materiały:</h4>
-
-<img class="rounded" src="~/Images/@Model.Notes" height=" 250px" width="250px" />
+@if(Model.Notes != null)
+{
+	@foreach (var material in Model.Notes)
+	{
+		<h1>@Html.DisplayFor(modelItem => material.Path)</h1>
+		<img class="rounded" src = "@material.Path" height=" 500px" width="800px" />
+	}
+}
+else
+{
+	<h5>Brak materiałów</h5>
+}
+<div class="col-md-12 text-center">
+	<button class="btn btn-danger" onclick="location.href='@Url.Action("AddMaterials", "Home", new {Id = Model.Id})'">Dodaj Materiał</button>
+</div>

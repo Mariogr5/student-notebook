@@ -1,38 +1,34 @@
-﻿@model IEnumerable<StudentsNotebook.Models.Kurs>
+﻿@model IEnumerable<StudentsNotebook.Models.Course>
 
 @{
 	ViewData["Title"] = "Courses";
 }
 
-<h1>Lista Kursów</h1>
+<h1>Lista Kursów(@ViewBag.NumberofCourses)</h1>
 
 <table class="table">
 	<thead>
 		<tr>
-			<th>Id kursu: </th>
 			<th>Nazwa kursu: </th>
 			<th>Prowadzący: </th>
 			<th>Trudność kursu: </th>
 		</tr>
 	</thead>
 	<tbody>
-		@foreach (var kursek in Model)
+		@foreach (var course in Model)
 		{
 			<tr>
 				<td>
-					@Html.DisplayFor(modelItem => kursek.Id)
+					@Html.DisplayFor(modelItem => course.Coursename)
 				</td>
 				<td>
-					@Html.DisplayFor(modelItem => kursek.Coursename)
+					@Html.DisplayFor(modelItem => course.Professor)
 				</td>
 				<td>
-					@Html.DisplayFor(modelItem => kursek.Professor)
+					@Html.DisplayFor(modelItem => course.Learndifficulty)
 				</td>
 				<td>
-					@Html.DisplayFor(modelItem => kursek.Learndifficulty)
-				</td>
-				<td>
-					@Html.ActionLink("Materiały", "Materials", new { id = kursek.Id})
+					@Html.ActionLink("Materiały", "Materials", new { id = course.Id})
 				</td>
 			</tr>
 		}

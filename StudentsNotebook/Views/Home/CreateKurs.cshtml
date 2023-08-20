@@ -1,9 +1,8 @@
-﻿@model StudentsNotebook.Models.Kurs
+﻿@model StudentsNotebook.Models.Course
 
 @{
 	ViewData["Title"] = "CreateKurs";
 }
-<h1 class ="display-4">Posiadasz @ViewBag.liczbakursow kursy</h1>
 <form asp-action="CreateKurs">
 	 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 	<table class="table-active">
@@ -34,10 +33,11 @@
 					<input asp-for="Learndifficulty" />
 					<span asp-validation-for="Learndifficulty" class="text-danger"></span>
 				</td>
-				<td>
-					<input asp-for="Notes" />
-					<span asp-validation-for="Notes" class="text-danger"></span>
+				<!--<td>
+					<input asp-for="Notes" type = "file"/>
+					<span  class="text-danger"></span>
 				</td>
+				-->
 			</tr>
 		</tbody>
 	</table>

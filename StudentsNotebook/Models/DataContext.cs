@@ -11,14 +11,21 @@ public class DataContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Kurs>()
+        modelBuilder.Entity<Course>()
             .HasKey(x => x.Id);
+            
 
-        modelBuilder.Entity<NewKurs>()
-            .HasKey(x => x.Kursid);
+        modelBuilder.Entity<NewCourse>()
+            .HasKey(x => x.Courseid);
+
+        modelBuilder.Entity<Course>()
+            .HasMany(x => x.Notes)
+            .WithOne(x => x.Course)
+            .HasForeignKey(x => x.CourseId);
     }
-    public DbSet<Kurs> curseslist { get; set; }
-    public DbSet<NewKurs> newcurseslist { get; set; }
+    public DbSet<Course> curseslist { get; set; }
+    public DbSet<NewCourse> newcurseslist { get; set; }
+    public DbSet<Material> materials { get; set; }
 
 
 }

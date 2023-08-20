@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mario\\Desktop\\zadaniedomowekredek2\\StutendNotebook\\StudentsNotebook\\StudentsNotebook.csproj": {}
+    "C:\\Users\\mario\\Desktop\\student-notebook-main\\StudentsNotebook\\StudentsNotebook.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mario\\Desktop\\zadaniedomowekredek2\\StutendNotebook\\StudentsNotebook\\StudentsNotebook.csproj": {
+    "C:\\Users\\mario\\Desktop\\student-notebook-main\\StudentsNotebook\\StudentsNotebook.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mario\\Desktop\\zadaniedomowekredek2\\StutendNotebook\\StudentsNotebook\\StudentsNotebook.csproj",
+        "projectUniqueName": "C:\\Users\\mario\\Desktop\\student-notebook-main\\StudentsNotebook\\StudentsNotebook.csproj",
         "projectName": "StudentsNotebook",
-        "projectPath": "C:\\Users\\mario\\Desktop\\zadaniedomowekredek2\\StutendNotebook\\StudentsNotebook\\StudentsNotebook.csproj",
+        "projectPath": "C:\\Users\\mario\\Desktop\\student-notebook-main\\StudentsNotebook\\StudentsNotebook.csproj",
         "packagesPath": "C:\\Users\\mario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mario\\Desktop\\zadaniedomowekredek2\\StutendNotebook\\StudentsNotebook\\obj\\",
+        "outputPath": "C:\\Users\\mario\\Desktop\\student-notebook-main\\StudentsNotebook\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -44,6 +44,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "Microsoft.AspNetCore.StaticFiles": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",

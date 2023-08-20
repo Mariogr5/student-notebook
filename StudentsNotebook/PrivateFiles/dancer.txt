@@ -1,0 +1,7 @@
+{
+"name":"Robert Openheimer",
+"Danceclass":"H",
+"NumberofPoints":1,
+"ContactNumber": "123414141",
+"ContactEmail": "atombomba123@gmail.com"
+}
